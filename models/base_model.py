@@ -7,7 +7,6 @@ class BaseModel:
     """the method of Base Model class"""
     def __init__(self, *args, **kwargs ):
         """initializes Base Class"""
-        for key, value_num in kwargs.items():
             if kwargs:
                 for key, value_num in kwargs.items():
                 date_format = "%Y-%m-%dT%H:%M:%S.%f"

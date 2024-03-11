@@ -7,18 +7,17 @@ class BaseModel:
     """the method of Base Model class"""
     def __init__(self, *args, **kwargs ):
         """initializes Base Class"""
-            if kwargs:
-                for key, value_num in kwargs.items():
-                date_format = "%Y-%m-%dT%H:%M:%S.%f"
+            if kwargs is not None and kwargs != {}:
                 if key == "created_at" or key == "updated_at":
-                  self.__dict__[key] = datetime.strptime(value_num, date_format)
+                  self.__dict__[key] = datetime.strptime("%Y-%m-%dT%H:%M:%S.%f")
                 else:
-                  self.__dict__[key] = value_num
+                  self.__dict__[key] = kwargs[key]
 
             else:
                 self.id = str(uuid.uuid4())
                 self.created_at = datetime.now()
                 self.updated_at = datetime.now()
+                storage.new(self)
     def __str__(self):
         """overriding"""
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)

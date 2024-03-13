@@ -12,7 +12,6 @@ from models.amenity import Amenity
 from models.place import Place
 
 
-
 class FileStorage:
 
     """storing and retrieving"""

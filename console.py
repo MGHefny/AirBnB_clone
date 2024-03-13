@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """entr in cmd interpreter"""
-
-import cmd
+cmd
 import sys
 import re
 import json

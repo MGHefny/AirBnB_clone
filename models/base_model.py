@@ -30,7 +30,8 @@ class BaseModel:
 
     def __str__(self):
         """overriding"""
-        return "[{}] ({}) {}".format(type(self).__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".\
+            format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """updated_at attribute to the now datetime"""

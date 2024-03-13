@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""User clss"""
+"""User clss"""
 
 from models.base_model import BaseModel
 
